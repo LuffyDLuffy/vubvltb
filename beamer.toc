@@ -1,9 +1,8 @@
 \beamer@sectionintoc {1}{引言：热机的功率与效率问题}{3}{0}{1}
-\beamer@sectionintoc {2}{有限时间热力学}{9}{0}{2}
-\beamer@subsectionintoc {2}{1}{有限时间热机模型}{9}{0}{2}
-\beamer@subsectionintoc {2}{2}{绝热捷径}{27}{0}{2}
-\beamer@subsectionintoc {2}{3}{等温捷径}{39}{0}{2}
-\beamer@sectionintoc {3}{类卡诺热机的功率与效率}{45}{0}{3}
-\beamer@subsectionintoc {3}{1}{类卡诺热机模型}{45}{0}{3}
-\beamer@subsectionintoc {3}{2}{过阻尼布朗粒子}{50}{0}{3}
-\beamer@subsectionintoc {3}{3}{欠阻尼布朗粒子}{60}{0}{3}
+\beamer@sectionintoc {2}{绝热捷径与等温捷径简介}{9}{0}{2}
+\beamer@subsectionintoc {2}{1}{绝热捷径}{9}{0}{2}
+\beamer@subsectionintoc {2}{2}{等温捷径}{19}{0}{2}
+\beamer@sectionintoc {3}{类卡诺热机的功率与效率}{25}{0}{3}
+\beamer@subsectionintoc {3}{1}{布朗粒子能量学}{25}{0}{3}
+\beamer@subsectionintoc {3}{2}{类卡诺热机模型}{32}{0}{3}
+\beamer@subsubsectionintoc {3}{2}{1}{过阻尼布朗粒子}{33}{0}{3}

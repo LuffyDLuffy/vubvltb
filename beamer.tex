@@ -61,177 +61,177 @@
 
 \begin{frame}{引言：热机的功率与效率问题}
     \begin{itemize}
-        \item<2-> 1824，卡诺指出\upcite{2005}：工作在相同高温热源和相同低温热源的所有热机中，以可逆热机的效率最高，为$\eta _{\mathrm{C}}=1-\frac{\mathrm{c}}{\mathrm{h}}$ 
-        \item<3-> 1975年，Curzon和Ahlborn研究了内可逆热机\upcite{Curzon1975}，得到了该热机在最大功率下的效率为$\eta _{\mathrm{CA}}=1-\sqrt{1-\eta _{\mathrm{C}}}$
-        \item<4-> 2008年，T. Schmiedl 和 U. Seifert提出了布朗随机热机模型\upcite{Schmiedl2008}，最大功率下的效率为$\frac{2 \eta_{\mathrm{C}}}{4-\eta_{\mathrm{C}}}$
-        \item<5-> 同年，涂展春推导出费曼棘轮热机\upcite{Tu2008}在最大功率下的效率$\frac{\eta _{\mathrm{C}}^{2}}{\eta _{\mathrm{C}}-\left( 1-\eta _{\mathrm{C}} \right) \ln \left( 1-\eta _{\mathrm{C}} \right)}$. \upcite{Tu2020}
+        \item<2-> 1824，卡诺指出\upcite{2005}：工作在相同高温热源和相同低温热源的所有热机中，以可逆热机的效率最高，为$\eta _{\mathrm{c}}=1-\frac{T_\mathrm{c}}{T_\mathrm{h}}$ 
+        \item<3-> 1975年，Curzon和Ahlborn研究了内可逆热机\upcite{Curzon1975}，得到了该热机在最大功率下的效率为$\eta _{\mathrm{CA}}=1-\sqrt{1-\eta _{\mathrm{c}}}$
+        \item<4-> 2008年，T. Schmiedl 和 U. Seifert提出了布朗随机热机模型\upcite{Schmiedl2008}，最大功率下的效率为$\frac{ \eta_{\mathrm{c}}}{2-\frac{1}{2}\eta_{\mathrm{c}}}$
+        \item<5-> 同年，涂展春推导出费曼棘轮热机\upcite{Tu2008}在最大功率下的效率$\frac{\eta _{\mathrm{c}}^{2}}{\eta _{\mathrm{c}}-\left( 1-\eta _{\mathrm{c}} \right) \ln \left( 1-\eta _{\mathrm{c}} \right)}$. \upcite{Tu2020}
         \item<6-> 2013年，涂展春在Schmiedl和Seifert工作\upcite{Schmiedl2008}的基础上，考虑了他们在过阻尼情况下忽略的惯性的影响，构建了一种类卡洛热机\upcite{Tu2013}. 发现这种随机热机在最大功率下的效率等于$\eta _{\mathrm{CA}}$
     \end{itemize}    
 \end{frame}
 
-\section{有限时间热力学}
-\subsection{有限时间热机模型}
-\begin{frame}{CA内可逆热机模型}
-\begin{columns}
-    \begin{column}{.62\textwidth}
-        \begin{exampleblock}{Curzon和Ahlborn的假设}
-            \begin{itemize}
-                \item<2-> 内可逆假设
-                \item<3-> 绝热过程熵产生为零
-                \item<4-> 绝热过程与等温过程所用的时间成正比，即循环总时间为$t_0 = a (t_{\mathrm{h}}+t_{\mathrm{c}})$
-                \item<5-> 线性热传输假设，即
-                \begin{equation}
-                    \begin{split}
-                        Q_{\mathrm{h}}&=\kappa_{\mathrm{h}}\left(T_{\mathrm{h}}-T_{\mathrm{eh}}\right) t_{\mathrm{h}}\\
-                        Q_{\mathrm{c}}&=\kappa_{\mathrm{c}}\left(T_{\mathrm{ec}}-T_{\mathrm{c}}\right) t_{\mathrm{c}}
-                    \end{split} 
-                    \label{eq1}
-                \end{equation}
-            \end{itemize}   
-        \end{exampleblock}
-    \end{column}
 
-    \begin{column}{.38\textwidth}
-        \begin{figure}[!htbp]
-            \begin{center}
-                \includegraphics[width=\textwidth]{p1.png}
-            \end{center}
-            \caption{CA内可逆热机}
-            \label{f1}
-        \end{figure}
-    \end{column}
-\end{columns}
-\end{frame}
+% \subsection{有限时间热机模型}
+% \begin{frame}{CA内可逆热机模型}
+% \begin{columns}
+%     \begin{column}{.62\textwidth}
+%         \begin{exampleblock}{Curzon和Ahlborn的假设}
+%             \begin{itemize}
+%                 \item<2-> 内可逆假设
+%                 \item<3-> 绝热过程熵产生为零
+%                 \item<4-> 绝热过程与等温过程所用的时间成正比，即循环总时间为$t_0 = a (t_{\mathrm{h}}+t_{\mathrm{c}})$
+%                 \item<5-> 线性热传输假设，即
+%                 \begin{equation}
+%                     \begin{split}
+%                         Q_{\mathrm{h}}&=\kappa_{\mathrm{h}}\left(T_{\mathrm{h}}-T_{\mathrm{eh}}\right) t_{\mathrm{h}}\\
+%                         Q_{\mathrm{c}}&=\kappa_{\mathrm{c}}\left(T_{\mathrm{ec}}-T_{\mathrm{c}}\right) t_{\mathrm{c}}
+%                     \end{split} 
+%                     \label{eq1}
+%                 \end{equation}
+%             \end{itemize}   
+%         \end{exampleblock}
+%     \end{column}
 
-\begin{frame}{CA内可逆热机模型}
-    \begin{columns}
-        \begin{column}{.62\textwidth}
-            \begin{block}{CA热机的功率}
-                \pause
-                输出功率
-                \begin{equation}
-                    P\left(T_{\mathrm{eh}}, T_{\mathrm{ec}}\right)=\frac{T_{\mathrm{eh}}-T_{\mathrm{ec}}}{\frac{T_{\mathrm{eh}}}{a \kappa_{h}\left(T_{h}-T_{\mathrm{eh}}\right)}+\frac{T_{\mathrm{ec}}}{a \kappa_{c}\left(T_{\mathrm{ec}}-T_{c}\right)}}
-                    \label{eq2}
-                \end{equation}
-                \pause 针对$T_{\mathrm{eh}}, T_{\mathrm{ec}}$使功率取最大值
-                \begin{equation}
-                    \begin{split}
-                        T_{\mathrm{eh}}^{*}&=\frac{\sqrt{\kappa_{h} T_{h}}+\sqrt{\kappa_{c} T_{c}}}{\sqrt{\kappa_{h}}+\sqrt{K_{c}}} \sqrt{T_{h}}\\
-                        T_{\mathrm{ec}}^{*}&=\frac{\sqrt{\kappa_{h} T_{h}}+\sqrt{\kappa_{c} T_{c}}}{\sqrt{K_{h}}+\sqrt{\kappa_{c}}} \sqrt{T_{c}}
-                    \end{split}
-                    \label{eq3}
-                \end{equation}
-            \end{block}
-        \end{column}
+%     \begin{column}{.38\textwidth}
+%         \begin{figure}[!htbp]
+%             \begin{center}
+%                 \includegraphics[width=\textwidth]{p1.png}
+%             \end{center}
+%             \caption{CA内可逆热机}
+%             \label{f1}
+%         \end{figure}
+%     \end{column}
+% \end{columns}
+% \end{frame}
+
+% \begin{frame}{CA内可逆热机模型}
+%     \begin{columns}
+%         \begin{column}{.62\textwidth}
+%             \begin{block}{CA热机的功率}
+%                 \pause
+%                 输出功率
+%                 \begin{equation}
+%                     P\left(T_{\mathrm{eh}}, T_{\mathrm{ec}}\right)=\frac{T_{\mathrm{eh}}-T_{\mathrm{ec}}}{\frac{T_{\mathrm{eh}}}{a \kappa_{h}\left(T_{h}-T_{\mathrm{eh}}\right)}+\frac{T_{\mathrm{ec}}}{a \kappa_{c}\left(T_{\mathrm{ec}}-T_{c}\right)}}
+%                     \label{eq2}
+%                 \end{equation}
+%                 \pause 针对$T_{\mathrm{eh}}, T_{\mathrm{ec}}$使功率取最大值
+%                 \begin{equation}
+%                     \begin{split}
+%                         T_{\mathrm{eh}}^{*}&=\frac{\sqrt{\kappa_{h} T_{h}}+\sqrt{\kappa_{c} T_{c}}}{\sqrt{\kappa_{h}}+\sqrt{K_{c}}} \sqrt{T_{h}}\\
+%                         T_{\mathrm{ec}}^{*}&=\frac{\sqrt{\kappa_{h} T_{h}}+\sqrt{\kappa_{c} T_{c}}}{\sqrt{K_{h}}+\sqrt{\kappa_{c}}} \sqrt{T_{c}}
+%                     \end{split}
+%                     \label{eq3}
+%                 \end{equation}
+%             \end{block}
+%         \end{column}
     
-        \begin{column}{.38\textwidth}
-            \onslide
-            \begin{figure}
-                \begin{center}
-                    \includegraphics[width=\textwidth]{p1.png}
-                \end{center}
-                \setcounter{figure}{0}
-                \caption{CA内可逆热机}
-            \end{figure}
-        \end{column}
-    \end{columns}
-\end{frame}
+%         \begin{column}{.38\textwidth}
+%             \onslide
+%             \begin{figure}
+%                 \begin{center}
+%                     \includegraphics[width=\textwidth]{p1.png}
+%                 \end{center}
+%                 \setcounter{figure}{0}
+%                 \caption{CA内可逆热机}
+%             \end{figure}
+%         \end{column}
+%     \end{columns}
+% \end{frame}
 
-\begin{frame}{CA内可逆热机模型}
-    \begin{alertblock}{CA热机在最大功率下的效率}
-        根据$\eta=1-T_{\mathrm{ec}} / T_{\mathrm{eh}}$就可以得到
-        \begin{equation}
-            \eta _{\mathrm{CA}}=1-\sqrt{1-\eta _{\mathrm{C}}}
-            \label{eq4}
-        \end{equation}
-    \end{alertblock}
-\end{frame}
+% \begin{frame}{CA内可逆热机模型}
+%     \begin{alertblock}{CA热机在最大功率下的效率}
+%         根据$\eta=1-T_{\mathrm{ec}} / T_{\mathrm{eh}}$就可以得到
+%         \begin{equation}
+%             \eta _{\mathrm{CA}}=1-\sqrt{1-\eta _{\mathrm{C}}}
+%             \label{eq4}
+%         \end{equation}
+%     \end{alertblock}
+% \end{frame}
 
-\begin{frame}{TU布朗随机热机模型}
-    \begin{columns}
-        \begin{column}{.62\textwidth}
-            \begin{exampleblock}{TU布朗随机热机的假设}
-                \begin{itemize}
-                    \item<2->  两个绝热过程是在瞬间完成的，$t_0 = (t_{\mathrm{h}}+t_{\mathrm{c}})$
-                    \item<3->  两个绝热过程中不可逆熵产生为零
-                    \item<4->  过阻尼假设，不考虑惯性的影响
-                \end{itemize}         
-            \end{exampleblock}
-        \end{column}
+% \begin{frame}{TU布朗随机热机模型}
+%     \begin{columns}
+%         \begin{column}{.62\textwidth}
+%             \begin{exampleblock}{TU布朗随机热机的假设}
+%                 \begin{itemize}
+%                     \item<2->  两个绝热过程是在瞬间完成的，$t_0 = (t_{\mathrm{h}}+t_{\mathrm{c}})$
+%                     \item<3->  两个绝热过程中不可逆熵产生为零
+%                     \item<4->  过阻尼假设，不考虑惯性的影响
+%                 \end{itemize}         
+%             \end{exampleblock}
+%         \end{column}
     
-        \begin{column}{.38\textwidth}
-            \onslide
-            \begin{figure}
-                \begin{center}
-                    \includegraphics[width=\textwidth]{p2.png}
-                \end{center}
-                \caption{TU布朗随机热机模型}
-                \label{f2}
-            \end{figure}
-        \end{column}
-    \end{columns}
-\end{frame}
+%         \begin{column}{.38\textwidth}
+%             \onslide
+%             \begin{figure}
+%                 \begin{center}
+%                     \includegraphics[width=\textwidth]{p2.png}
+%                 \end{center}
+%                 \caption{TU布朗随机热机模型}
+%                 \label{f2}
+%             \end{figure}
+%         \end{column}
+%     \end{columns}
+% \end{frame}
 
-\begin{frame}{TU布朗随机热机的功率}
-    \begin{columns}
-        \begin{column}{.62\textwidth}
-            \begin{block}{TU布朗随机热机}
-                \pause
-                平均功输出  
-                    \begin{equation}
-                        \begin{split}
-                            -W=\left(T_{\mathrm{h}}-T_{\mathrm{c}}\right) \Delta S-\left({1}/{t_{\mathrm{h}}}+{1}/{t_{\mathrm{c}}}\right) A_{\mathrm{irr}}
-                        \end{split} 
-                        \label{eq5}
-                    \end{equation}
-                    \pause
-                    吸收热
-                    \begin{equation}
-                        \begin{split}
-                            Q =T_{\mathrm{h}} \Delta S-{A_{\mathrm{irr}}}/{t_{\mathrm{h}}}
-                        \end{split}
-                        \label{eq6}
-                    \end{equation}
-                    \pause
-                    功率
-                    \begin{equation}
-                        \begin{split}
-                            P=\frac{\left(T_{\mathrm{h}}-T_{\mathrm{c}}\right) \Delta S-\left({1}/{t_{\mathrm{h}}}+{1}/{t_{\mathrm{c}}}\right) A_{\mathrm{irr}}}{t_{\mathrm{h}} + t_{\mathrm{c}}}
-                        \end{split}
-                        \label{eq7}
-                    \end{equation}       
-            \end{block}
-        \end{column}
+% \begin{frame}{TU布朗随机热机的功率}
+%     \begin{columns}
+%         \begin{column}{.62\textwidth}
+%             \begin{block}{TU布朗随机热机}
+%                 \pause
+%                 平均功输出  
+%                     \begin{equation}
+%                         \begin{split}
+%                             -W=\left(T_{\mathrm{h}}-T_{\mathrm{c}}\right) \Delta S-\left({1}/{t_{\mathrm{h}}}+{1}/{t_{\mathrm{c}}}\right) A_{\mathrm{irr}}
+%                         \end{split} 
+%                         \label{eq5}
+%                     \end{equation}
+%                     \pause
+%                     吸收热
+%                     \begin{equation}
+%                         \begin{split}
+%                             Q =T_{\mathrm{h}} \Delta S-{A_{\mathrm{irr}}}/{t_{\mathrm{h}}}
+%                         \end{split}
+%                         \label{eq6}
+%                     \end{equation}
+%                     \pause
+%                     功率
+%                     \begin{equation}
+%                         \begin{split}
+%                             P=\frac{\left(T_{\mathrm{h}}-T_{\mathrm{c}}\right) \Delta S-\left({1}/{t_{\mathrm{h}}}+{1}/{t_{\mathrm{c}}}\right) A_{\mathrm{irr}}}{t_{\mathrm{h}} + t_{\mathrm{c}}}
+%                         \end{split}
+%                         \label{eq7}
+%                     \end{equation}       
+%             \end{block}
+%         \end{column}
     
-        \begin{column}{.38\textwidth}
-            \onslide
-            \begin{figure}
-                \begin{center}
-                    \includegraphics[width=\textwidth]{p2.png}
-                \end{center}
-                \setcounter{figure}{1}
-                \caption{TU布朗随机热机模型}
-            \end{figure}
-        \end{column}
-    \end{columns}
-\end{frame}
+%         \begin{column}{.38\textwidth}
+%             \onslide
+%             \begin{figure}
+%                 \begin{center}
+%                     \includegraphics[width=\textwidth]{p2.png}
+%                 \end{center}
+%                 \setcounter{figure}{1}
+%                 \caption{TU布朗随机热机模型}
+%             \end{figure}
+%         \end{column}
+%     \end{columns}
+% \end{frame}
 
-\begin{frame}{TU布朗随机热机}
-\begin{alertblock}{TU布朗随机热机的效率}
-通过优化$t_1,\ t_2$不难得到，最大功率时的效率为
-\begin{equation}
-    \eta^{*}=\frac{\eta_{\mathrm{C}}}{2-\eta_{\mathrm{C}} / 2}
-    \label{eq8}
-\end{equation}
-\end{alertblock}
-\end{frame}
-
+% \begin{frame}{TU布朗随机热机}
+% \begin{alertblock}{TU布朗随机热机的效率}
+% 通过优化$t_1,\ t_2$不难得到，最大功率时的效率为
+% \begin{equation}
+%     \eta^{*}=\frac{\eta_{\mathrm{C}}}{2-\eta_{\mathrm{C}} / 2}
+%     \label{eq8}
+% \end{equation}
+% \end{alertblock}
+% \end{frame}
+\section{绝热捷径与等温捷径简介}
 \subsection{绝热捷径}
 \begin{frame}{绝热捷径}
 为了在有限时间内实现平衡态的转化， Demirplak and Rice \upcite{Demirplak2003}和 Berry \upcite{Berry2009} 独立发展出了绝热捷径的策略。
 \pause
 
-依赖于时间缓变的$H_0(t)$，绝热定理\upcite{Griffiths2018}
+对于依赖于时间缓变的$H_0(t)$，有绝热定理\upcite{Griffiths2018}
 \begin{equation}
 \begin{split}
     |\psi(t)\rangle=&|n(t)\rangle e^{i \theta_{n}(t)} e^{i \gamma_{n}(t)},\\
@@ -252,7 +252,7 @@
 \end{frame}
 
 \begin{frame}{绝热捷径}
-    在经典的情形下，对于随时间缓变的$H_0 (t)$，也可以引入辅助哈密顿量$H_1 (t)$，使得绝热不变量严格守恒
+    在经典的情形下，对于随时间缓变的$H_0 (t)$，也可以引入辅助哈密顿量$H_1 (t)$，使得绝热不变量\upcite{LiuChuan2019}严格守恒
         \begin{equation}
             I(E, \boldsymbol{\lambda}) \equiv \int \mathrm{d} \bm{\eta} \theta\left[E-H_{0}(z ; \boldsymbol{\lambda})\right]
           \label{eq11}
@@ -273,22 +273,22 @@
     \end{alertblock}
 \end{frame}
 
-\begin{frame}{利用绝热捷径实现平衡态的转化}
-考虑谐振子势式\eqref{eq12}，施加辅助哈密顿量之后的新哈密顿量为
-\begin{equation}
-    H(t)=\frac{p^{2}}{2}+\frac{q^2}{2 \lambda(t)^{2}}+\frac{\dot{\lambda}}{2 \lambda(t)} q p,
-    \label{eq13.5}
-\end{equation}
-\pause
-可以得到运动方程
-\begin{equation}
-    \left\{\begin{aligned}
-        &\dot{q}=\frac{\partial H}{\partial p}=\frac{p}{m}+\frac{\lambda(t)}{2 \lambda(t)} q \\
-        &\dot{p}=-\frac{\partial H}{\partial q}=-2  \frac{q}{\lambda^{2}(t)}-\frac{\dot{\lambda}(t)}{2 \lambda(t)} p
-    \end{aligned}\right.
-    \label{eq14}
-\end{equation}
-\end{frame}
+% \begin{frame}{利用绝热捷径实现平衡态的转化}
+% 考虑谐振子势式\eqref{eq12}，施加辅助哈密顿量之后的新哈密顿量为
+% \begin{equation}
+%     H(t)=\frac{p^{2}}{2}+\frac{q^2}{2 \lambda(t)^{2}}+\frac{\dot{\lambda}}{2 \lambda(t)} q p,
+%     \label{eq13.5}
+% \end{equation}
+% \pause
+% 可以得到运动方程
+% \begin{equation}
+%     \left\{\begin{aligned}
+%         &\dot{q}=\frac{\partial H}{\partial p}={p}+\frac{\lambda(t)}{2 \lambda(t)} q \\
+%         &\dot{p}=-\frac{\partial H}{\partial q}=-2  \frac{q}{\lambda^{2}(t)}-\frac{\dot{\lambda}(t)}{2 \lambda(t)} p
+%     \end{aligned}\right.
+%     \label{eq14}
+% \end{equation}
+% \end{frame}
 
 \begin{frame}{利用绝热捷径实现平衡态的转化}
 \begin{alertblock}{平衡态的转化}
@@ -335,10 +335,10 @@
 
 \begin{frame}{等温捷径}
 \begin{alertblock}{等温平衡态的转化}
-系统在原哈密蹲下的瞬时平衡态
+系统在原哈密顿量$H_{0}(q, p, \lambda(t))$下的瞬时平衡态
 \begin{equation}
     \begin{split}
-        \rho(q, p, t) &= \mathrm{e}^{\beta\left[F(\lambda(t))-H_{0}(x, p, \lambda(t))\right]}
+        \rho(q, p, t) &= \mathrm{e}^{\beta\left[F(\lambda(t))-H_{0}(q, p, \lambda(t))\right]}
     \end{split}
     \label{eq21}
 \end{equation}
@@ -349,7 +349,7 @@
     \label{eq22}
 \end{equation}
 \pause
-利用上式\eqref{eq22}也可以得到，对谐振子势$U_0 (q, \lambda(t))= q^{2} / 2 \lambda(t)^2$
+利用上式\eqref{eq22}，对依赖于时间的谐振子势$U_0 = q^{2} / 2 \lambda(t)^2$
 \begin{equation}
     U_{1}(q, p, t)=-\frac{\dot{\lambda}(t)}{2 \gamma \lambda(t)}\left[(p-\gamma q)^{2}+ q^{2}/\lambda(t)^2\right]
     \label{eq2.62}
@@ -358,13 +358,15 @@
 \end{frame} 
 
 \section{类卡诺热机的功率与效率}
-\subsection{类卡诺热机模型}
-\begin{frame}{随机能量学}
+\subsection{布朗粒子能量学}
+\begin{frame}{布朗粒子能量学}
+\pause
 哈密顿量为$H=\frac{p^{2}}{2}+U_0 (q,\lambda(t)) + U_1 (q,p,t)$，其全微分
 \begin{equation}
     \M{d} H=\left(\dot{p} p+\dot{q} \frac{\partial U_0}{\partial q} +  \dot{p} \PP{U_1}{p} + \dot{q} \PP{U_1}{q}  \right) \M{d} t+\left(\dot{\lambda} \frac{\partial U_0}{\partial \lambda} + \PP{U_1}{t} \right) \M{d} t
     \label{eq31.2}
 \end{equation}
+\pause
 定义沿着轨道的能量差$\Delta e$\upcite{Tu2013}、输入功$w$\upcite{Sekimoto2010,Jarzynski1997,Sekimoto_1997}、吸收热$\bar{q}$
 \begin{equation}
 % \begin{align}
@@ -378,7 +380,7 @@
 \end{equation}
 \end{frame}
 
-\begin{frame}{随机能量学}
+\begin{frame}{布朗粒子能量学}
 对$\Delta e,\ w ,\ \bar{q}$求系综平均得
 \begin{align}
     \Delta E &\equiv \langle\Delta e\rangle=\left.\int \M{d} q \int \M{d} p(H \rho)\right|_{t_{i}} ^{t_{f}}\\
@@ -389,50 +391,86 @@
 \end{align} 
 \end{frame}
 
-
-\begin{frame}{类卡诺热机效率}
-    \begin{columns}
-        \begin{column}{.7\textwidth}
-            \begin{exampleblock}{类卡诺热机模型的假设}
-            \begin{itemize}
-            \item<2-> 采用依赖于时间的谐振子势
-            \begin{equation}
-                U_0 = q^{2} / 2 \lambda(t)^2
-                \label{eq32}
-            \end{equation}
-            再配上相应的辅助势驱动布朗粒子做功
-            \item<3-> 忽略绝热捷径过程的时间 
-            \end{itemize}
-            \end{exampleblock}          
-        \end{column}
-        \begin{column}{.4\textwidth}
-        \begin{figure}
-            \centering
-            \def\svgwidth{\columnwidth}
-            \input{fig/p3.1.pdf_tex}
-            \caption{类卡诺热机模型}
-            \label{p3.1}
-            \end{figure}
-        \end{column}   
-    \end{columns}
+\begin{frame}{布朗粒子能量学}
+\begin{alertblock}{布朗粒子能量学——依赖于时间谐振子势}
+依赖于时间的谐振子势$U_0 = q^{2} / 2 \lambda(t)^2$，此时$U=U_0 + U_1$，得
+\begin{itemize}
+    \item<2-> 过阻尼情况
+    \begin{equation}
+        \Delta E = \beta_f^{-1} - \beta_i^{-1} =0
+        \label{eq19}
+    \end{equation}
+    \begin{equation}
+        \begin{split}
+            Q = - W = \beta^{-1} \ln{\frac{\lambda_f}{\lambda_i}} - \beta^{-1} \gamma \int_{t_i}^{t_f} \mathrm{d} t    \dot{\lambda}^2 
+        \end{split}
+        \label{eq3.15}
+    \end{equation}
+    \item<3-> 欠阻尼情况
+    
+    \begin{equation}
+        \Delta E = \beta_f^{-1} - \beta_i^{-1} =0
+        \label{eq3.43}
+    \end{equation}
+    \begin{equation}
+        Q =-W=\beta^{-1} \int_{t_i}^{t_f} \left(\frac{\dot{\lambda}}{\lambda}-\frac{1}{\gamma} \frac{\dot{\lambda}^{2}}{\lambda^{2}}-\gamma \dot{\lambda}^{2}\right)
+        \label{eq3.44}
+    \end{equation}
+\end{itemize}
+\end{alertblock}
 \end{frame}
-\subsection{过阻尼布朗粒子}
-\begin{frame}{类卡诺热机的功率与效率}
+
+\subsection{类卡诺热机模型}
+\begin{frame}
+\frametitle{类卡诺热机模型}
+\begin{figure}
+    \centering
+    \def\svgwidth{0.6\columnwidth}
+    \input{fig/p3.1.pdf_tex}
+    \caption{类卡诺热机模型}
+    \label{p3.1}
+\end{figure}
+\end{frame}
+
+% \begin{frame}{类卡诺热机模型}
+%     \begin{columns}
+%         \begin{column}{.7\textwidth}
+%             \begin{exampleblock}{类卡诺热机模型的假设}
+%             \begin{itemize}
+%             \item<2-> 采用依赖于时间的谐振子势
+%             \begin{equation}
+%                 U_0 = q^{2} / 2 \lambda(t)^2
+%                 \label{eq32}
+%             \end{equation}
+%             再配上相应的辅助势驱动布朗粒子做功
+%             \item<3-> 忽略绝热捷径过程的时间 
+%             \end{itemize}
+%             \end{exampleblock}          
+%         \end{column}
+%         \begin{column}{.4\textwidth}
+%         \begin{figure}
+%             \centering
+%             \def\svgwidth{\columnwidth}
+%             \input{fig/p3.1.pdf_tex}
+%             \caption{类卡诺热机模型}
+%             \label{p3.1}
+%         \end{figure}
+%         \end{column}   
+%     \end{columns}
+% \end{frame}
+\subsubsection{过阻尼布朗粒子}
+\begin{frame}{类卡诺热机模型}
     \begin{columns}
         \begin{column}{.7\textwidth}
-            \begin{block}{类卡诺热机的功率与效率}
+            \begin{block}{类卡诺热机循环}
             \begin{itemize}
             \item<2-> A.等温膨胀
-
-            将式\eqref{eq32}和式\eqref{eq2.62}代入式\eqref{eq3.12}可得
             \begin{equation}
                 Q_{\mathrm{A}} = \beta_{\mathrm{h}}^{-1} \ln{\frac{\lambda_1}{\lambda_0}} - \beta_{\mathrm{h}}^{-1} C_{\mathrm{h}} [\lambda_{\mathrm{h}}(\tau)] \frac{1}{t_1}     
                 \label{eq3.16}
             \end{equation}
-            其中$C_{\mathrm{h}} [\lambda_{\mathrm{h}}(\tau)] \equiv \gamma \int_{0}^{1} \mathrm{d} \tau \left(\DD{\lambda_{h}}{\tau}\right)^2,$ $\lambda_{h}(\tau)\equiv\lambda({t_1 \tau})$
-            \item<3-> B.绝热膨胀
-            
-            同理可得
+            其中$C_{\mathrm{h}} [\lambda_{\mathrm{h}}(\tau)] \equiv \gamma \int_{0}^{1} \mathrm{d} \tau \left(\DD{\lambda_{\mathrm{h}}}{\tau}\right)^2,\lambda_{\mathrm{h}}(\tau)\equiv\lambda({t_1 \tau})$
+            \item<3-> B.绝热膨胀 
             \begin{equation}
                 W_{\mathrm{B}} = \Delta E_{\mathrm{B}} = (\beta_{\mathrm{c}}^{-1} - \beta_{\mathrm{h}}^{-1}),\  Q_{\mathrm{B}}=0
                 \label{eq3.17}
@@ -445,27 +483,25 @@
             \centering
             \def\svgwidth{\columnwidth}
             \input{fig/p3.1.pdf_tex}
-            \setcounter{figure}{2}
+            \setcounter{figure}{0}
             \caption{类卡诺热机模型}
             \end{figure}
         \end{column}   
     \end{columns}
 \end{frame}
 
-\begin{frame}{类卡诺热机的功率与效率}
+\begin{frame}{类卡诺热机模型}
     \begin{columns}
         \begin{column}{.7\textwidth}
-            \begin{block}{类卡诺热机的功率与效率}
+            \begin{block}{类卡诺热机循环}
             \begin{itemize}
             \item<2-> C.等温压缩
-
             \begin{equation}
                 Q_{\mathrm{C}} = \beta_{\mathrm{c}}^{-1} \ln{\frac{\lambda_3}{\lambda_2}} - \beta_{\mathrm{c}}^{-1} C_{\mathrm{c}} [\lambda_{\mathrm{c}}(\tau)] \frac{1}{t_3}
                 \label{eq3.18}
             \end{equation}
             其中$C_{\mathrm{c}} [\lambda_{\mathrm{c}}(\tau)]\equiv \gamma \int_{0}^{1} \mathrm{d} \tau    \left(\DD{\lambda_{c}}{\tau}\right)^2$,$\lambda_{\mathrm{c}}(\tau)\equiv\lambda(t_3 \tau + t_2 +t_1)$
-            \item<3-> D.绝热压缩
-            
+            \item<3-> D.绝热压缩         
             \begin{equation}
                 W_{\mathrm{D}} = \Delta E_{\mathrm{D}} = (\beta_{\mathrm{h}}^{-1} - \beta_{\mathrm{c}}^{-1}),\  Q_{\mathrm{D}}=0
                 \label{eq3.19}
@@ -478,7 +514,7 @@
             \centering
             \def\svgwidth{\columnwidth}
             \input{fig/p3.1.pdf_tex}
-            \setcounter{figure}{2}
+            \setcounter{figure}{0}
             \caption{类卡诺热机模型}
             \end{figure}
         \end{column}   
@@ -494,6 +530,7 @@
     \end{split}
     \label{eq3.35}
 \end{equation}
+\pause
 效率为
 \begin{equation}
     \begin{split}
@@ -524,8 +561,8 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{过阻尼布朗粒子随机热机的效率}
-\begin{alertblock}{过阻尼布朗粒子随机热机的效率}
+\frametitle{类卡诺热机的功率与效率}
+\begin{alertblock}{布朗粒子类卡诺热机在最大功率时的效率}
 将上式\eqref{eq37}代入效率的表达式\eqref{eq3.37}可得 
 \begin{equation}
     \eta^{*}=\frac{\eta_{\mathrm{c}}}{3-\left(\eta_{\mathrm{c}}+\sqrt{1-\eta_{\mathrm{c}}}\right)}
@@ -533,51 +570,51 @@
 \end{alertblock}
 \end{frame}
 
-\subsection{欠阻尼布朗粒子}
-\begin{frame}
-\frametitle{欠阻尼布朗粒子随机热机的效率}
-欠阻尼布朗粒子的不同之处仅在于
-\begin{equation}
-    C_{\mathrm{h}} [\lambda_{\mathrm{h}}(\tau)]\equiv \int_{{0}}^{{1}} \mathrm{d} \tau \left(\frac{1}{\gamma{\lambda_{\mathrm{h}}^{2}}} +\gamma  \right)\left({\DD{\lambda_{\mathrm{h}}}{\tau}}\right)^{2},\ \lambda_{\mathrm{h}}(\tau)\equiv\lambda(t_1 \tau)
-    \label{eq3.46}
-\end{equation}
-\begin{equation}
-    C_{\mathrm{c}} [\lambda_{\mathrm{c}}(\tau)]\equiv \int_{{0}}^{{1}} \mathrm{d} \tau \left(\frac{1}{\gamma{\lambda_{\mathrm{c}}^{2}}} +\gamma  \right)\left({\DD{\lambda_{\mathrm{c}}}{\tau}}\right)^{2},\ \lambda_{\mathrm{c}}(\tau)\equiv\lambda(t_3 \tau + t_2 +t_1)
-    \label{eq3.46.5}
-\end{equation}
+% \subsubsection{欠阻尼布朗粒子}
+% \begin{frame}
+% \frametitle{欠阻尼布朗粒子类卡诺热机在最大功率时的效率}
+% 欠阻尼布朗粒子的不同之处仅在于
+% \begin{equation}
+%     C_{\mathrm{h}} [\lambda_{\mathrm{h}}(\tau)]\equiv \int_{{0}}^{{1}} \mathrm{d} \tau \left(\frac{1}{\gamma{\lambda_{\mathrm{h}}^{2}}} +\gamma  \right)\left({\DD{\lambda_{\mathrm{h}}}{\tau}}\right)^{2},\ \lambda_{\mathrm{h}}(\tau)\equiv\lambda(t_1 \tau)
+%     \label{eq3.46}
+% \end{equation}
+% \begin{equation}
+%     C_{\mathrm{c}} [\lambda_{\mathrm{c}}(\tau)]\equiv \int_{{0}}^{{1}} \mathrm{d} \tau \left(\frac{1}{\gamma{\lambda_{\mathrm{c}}^{2}}} +\gamma  \right)\left({\DD{\lambda_{\mathrm{c}}}{\tau}}\right)^{2},\ \lambda_{\mathrm{c}}(\tau)\equiv\lambda(t_3 \tau + t_2 +t_1)
+%     \label{eq3.46.5}
+% \end{equation}
 
-\end{frame}
+% \end{frame}
 
-\begin{frame}
-\frametitle{欠阻尼布朗粒子随机热机的效率}
-同样也可以用求泛函极值的办法求得
-\begin{equation}
-    C_{\mathrm{h}} =\frac{1}{\gamma} \left[\left(\sqrt{\gamma^{2} \lambda_{1} ^{2}+1}-\sqrt{\gamma^{2} \lambda_{0} ^{2}+1}\right)-\ln \frac{\lambda_{0}\left(1+\sqrt{\gamma^{2} \lambda_{1} ^{2}+1}\right) }{\lambda_{1} \left(1+\sqrt{\gamma^{2} \lambda_{0} ^{2}+1}\right)}\right]^2
-    \label{eq41}
-\end{equation}
-\begin{equation}
-    C_{\mathrm{c}} =\frac{1}{\gamma} \left[\left(\sqrt{\gamma^{2} \lambda_{3} ^{2}+1}-\sqrt{\gamma^{2} \lambda_{2} ^{2}+1}\right)-\ln \frac{\lambda_{2}\left(1+\sqrt{\gamma^{2} \lambda_{3} ^{2}+1}\right) }{\lambda_{3} \left(1+\sqrt{\gamma^{2} \lambda_{2} ^{2}+1}\right)}\right]^2
-    \label{eq42}
-\end{equation}
-\end{frame}
+% \begin{frame}
+% \frametitle{欠阻尼布朗粒子随机热机的效率}
+% 同样也可以用求泛函极值的办法求得
+% \begin{equation}
+%     C_{\mathrm{h}} =\frac{1}{\gamma} \left[\left(\sqrt{\gamma^{2} \lambda_{1} ^{2}+1}-\sqrt{\gamma^{2} \lambda_{0} ^{2}+1}\right)-\ln \frac{\lambda_{0}\left(1+\sqrt{\gamma^{2} \lambda_{1} ^{2}+1}\right) }{\lambda_{1} \left(1+\sqrt{\gamma^{2} \lambda_{0} ^{2}+1}\right)}\right]^2
+%     \label{eq41}
+% \end{equation}
+% \begin{equation}
+%     C_{\mathrm{c}} =\frac{1}{\gamma} \left[\left(\sqrt{\gamma^{2} \lambda_{3} ^{2}+1}-\sqrt{\gamma^{2} \lambda_{2} ^{2}+1}\right)-\ln \frac{\lambda_{2}\left(1+\sqrt{\gamma^{2} \lambda_{3} ^{2}+1}\right) }{\lambda_{3} \left(1+\sqrt{\gamma^{2} \lambda_{2} ^{2}+1}\right)}\right]^2
+%     \label{eq42}
+% \end{equation}
+% \end{frame}
 
-\begin{frame}
-\frametitle{欠阻尼布朗粒子随机热机的效率}
-\begin{alertblock}{欠阻尼布朗粒子随机热机的效率}
-    在$\gamma \lambda \to 0$的情况下，可得$\chi=1$，于是得到
-    \begin{equation}
-        \eta=1-\sqrt{1-\eta_{\mathrm{c}}}
-        \label{eq3.53}
-    \end{equation}   
-\end{alertblock}
-\end{frame}
+% \begin{frame}
+% \frametitle{欠阻尼布朗粒子随机热机的效率}
+% \begin{alertblock}{欠阻尼布朗粒子随机热机的效率}
+%     在$\gamma \lambda \to 0$的情况下，可得$\chi=1$，于是得到
+%     \begin{equation}
+%         \eta=1-\sqrt{1-\eta_{\mathrm{c}}}
+%         \label{eq3.53}
+%     \end{equation}   
+% \end{alertblock}
+% \end{frame}
 
 \begin{frame}
     \frametitle{总结与展望}
 \begin{alertblock}{目前做了的工作}
 \begin{itemize}
     \item<2-> 对于欠阻尼和过阻尼等温捷径过程，以及绝热捷径过程，得到了计算能量差、输入功、吸收热的表达式
-    \item<3-> 利用等温捷径和绝热捷径构造了类卡诺热机
+    \item<3-> 利用等温捷径和绝热捷径构造了，在过阻尼情况下构造了类卡诺热机
     \item<4-> 对于过阻尼情况，计算出了该热机在最大功率时的效率 
 \end{itemize}
 \end{alertblock}
@@ -587,7 +624,7 @@
     \frametitle{总结与展望}
 \begin{alertblock}{以后要做的工作}
 \begin{itemize}
-    \item<2-> 计算欠阻尼情况下，该热机在最大功率时的效率
+    \item<2-> 在欠阻尼情况下，构造出类卡诺热机，并计算该热机在最大功率时的效率
     \item<3-> 将构造的类卡诺热机的效率与其他热机进行比较，包括Curzon和Ahlborn构造的内可逆热机\upcite{Curzon1975}，T. Schmiedl 和 U. Seifert构造的布朗随机热机模型\upcite{Schmiedl2008}，涂展春构建的类卡洛热机\upcite{Tu2013}，Campo等人构建的奥托热机\upcite{DelCampo2014}
 \end{itemize}
 \end{alertblock}
