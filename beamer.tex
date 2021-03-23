@@ -422,7 +422,7 @@
         \begin{column}{.7\textwidth}
             \begin{block}{类卡诺热机的功率与效率}
             \begin{itemize}
-            \item A.等温膨胀
+            \item<2-> A.等温膨胀
 
             将式\eqref{eq32}和式\eqref{eq2.62}代入式\eqref{eq3.12}可得
             \begin{equation}
@@ -430,7 +430,7 @@
                 \label{eq3.16}
             \end{equation}
             其中$C_{\mathrm{h}} [\lambda_{\mathrm{h}}(\tau)] \equiv \gamma \int_{0}^{1} \mathrm{d} \tau \left(\DD{\lambda_{h}}{\tau}\right)^2,$ $\lambda_{h}(\tau)\equiv\lambda({t_1 \tau})$
-            \item B.绝热膨胀
+            \item<3-> B.绝热膨胀
             
             同理可得
             \begin{equation}
@@ -457,14 +457,14 @@
         \begin{column}{.7\textwidth}
             \begin{block}{类卡诺热机的功率与效率}
             \begin{itemize}
-            \item C.等温压缩
+            \item<2-> C.等温压缩
 
             \begin{equation}
                 Q_{\mathrm{C}} = \beta_{\mathrm{c}}^{-1} \ln{\frac{\lambda_3}{\lambda_2}} - \beta_{\mathrm{c}}^{-1} C_{\mathrm{c}} [\lambda_{\mathrm{c}}(\tau)] \frac{1}{t_3}
                 \label{eq3.18}
             \end{equation}
-            其中$C_{\mathrm{c}} [\lambda_{\mathrm{c}}(\tau)]\equiv \gamma \int_{0}^{1} \mathrm{d} \tau    \left(\DD{\lambda_{c}}{\tau}\right)^2,\\ \lambda_{\mathrm{c}}(\tau)\equiv\lambda(t_3 \tau + t_2 +t_1)$
-            \item D.绝热压缩
+            其中$C_{\mathrm{c}} [\lambda_{\mathrm{c}}(\tau)]\equiv \gamma \int_{0}^{1} \mathrm{d} \tau    \left(\DD{\lambda_{c}}{\tau}\right)^2$,$\lambda_{\mathrm{c}}(\tau)\equiv\lambda(t_3 \tau + t_2 +t_1)$
+            \item<3-> D.绝热压缩
             
             \begin{equation}
                 W_{\mathrm{D}} = \Delta E_{\mathrm{D}} = (\beta_{\mathrm{h}}^{-1} - \beta_{\mathrm{c}}^{-1}),\  Q_{\mathrm{D}}=0
@@ -509,17 +509,101 @@
 \begin{alertblock}{类卡诺热机的效率}
     优化$t_1,\ t_3$使得功率最大得
  \begin{equation}
-    \eta^* =\frac{\eta_{\mathrm{c}}\left[\sqrt{\chi(1-\eta_{\mathrm{c}})}+1\right]}{2-\eta_{\mathrm{c}}+2 \sqrt{\chi\left(1-\eta_{\mathrm{c}}\right)}}
+    \eta^{*}=\frac{\eta_{\mathrm{c}}}{2-\eta_{\mathrm{c}} \frac{\sqrt{\chi\left(1-\eta_{\mathrm{c}}\right)}-1}{\chi\left(1-n_{\mathrm{c}}\right)-1}}
     \label{eq3.37}
+\end{equation}
+其中$\eta_{\mathrm{c}}\equiv 1-\frac{\beta_{\mathrm{c}}^{-1}}{\beta_{\mathrm{h}}^{-1}}$是卡诺效率，而$\chi\equiv\frac{C_{\mathrm{c}} [\lambda_{\mathrm{c}}(\tau)]}{C_{\mathrm{h}} [\lambda_{\mathrm{h}}(\tau)]}$。
+\pause
+
+根据功率的表达式\eqref{eq3.35}，对$C_{\mathrm{h}} [\lambda_{\mathrm{h}}(\tau)]$和$C_{\mathrm{c}} [\lambda_{\mathrm{c}}(\tau)]$求泛函极值可得
+\begin{equation}
+    \chi={(1-\eta_{\mathrm{c}})}^{-2}
+    \label{eq37}
 \end{equation}
 \end{alertblock}
 \end{frame}
 
+\begin{frame}
+\frametitle{过阻尼布朗粒子随机热机的效率}
+\begin{alertblock}{过阻尼布朗粒子随机热机的效率}
+将上式\eqref{eq37}代入效率的表达式\eqref{eq3.37}可得 
+\begin{equation}
+    \eta^{*}=\frac{\eta_{\mathrm{c}}}{3-\left(\eta_{\mathrm{c}}+\sqrt{1-\eta_{\mathrm{c}}}\right)}
+\end{equation}   
+\end{alertblock}
+\end{frame}
+
 \subsection{欠阻尼布朗粒子}
+\begin{frame}
+\frametitle{欠阻尼布朗粒子随机热机的效率}
+欠阻尼布朗粒子的不同之处仅在于
+\begin{equation}
+    C_{\mathrm{h}} [\lambda_{\mathrm{h}}(\tau)]\equiv \int_{{0}}^{{1}} \mathrm{d} \tau \left(\frac{1}{\gamma{\lambda_{\mathrm{h}}^{2}}} +\gamma  \right)\left({\DD{\lambda_{\mathrm{h}}}{\tau}}\right)^{2},\ \lambda_{\mathrm{h}}(\tau)\equiv\lambda(t_1 \tau)
+    \label{eq3.46}
+\end{equation}
+\begin{equation}
+    C_{\mathrm{c}} [\lambda_{\mathrm{c}}(\tau)]\equiv \int_{{0}}^{{1}} \mathrm{d} \tau \left(\frac{1}{\gamma{\lambda_{\mathrm{c}}^{2}}} +\gamma  \right)\left({\DD{\lambda_{\mathrm{c}}}{\tau}}\right)^{2},\ \lambda_{\mathrm{c}}(\tau)\equiv\lambda(t_3 \tau + t_2 +t_1)
+    \label{eq3.46.5}
+\end{equation}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{欠阻尼布朗粒子随机热机的效率}
+同样也可以用求泛函极值的办法求得
+\begin{equation}
+    C_{\mathrm{h}} =\frac{1}{\gamma} \left[\left(\sqrt{\gamma^{2} \lambda_{1} ^{2}+1}-\sqrt{\gamma^{2} \lambda_{0} ^{2}+1}\right)-\ln \frac{\lambda_{0}\left(1+\sqrt{\gamma^{2} \lambda_{1} ^{2}+1}\right) }{\lambda_{1} \left(1+\sqrt{\gamma^{2} \lambda_{0} ^{2}+1}\right)}\right]^2
+    \label{eq41}
+\end{equation}
+\begin{equation}
+    C_{\mathrm{c}} =\frac{1}{\gamma} \left[\left(\sqrt{\gamma^{2} \lambda_{3} ^{2}+1}-\sqrt{\gamma^{2} \lambda_{2} ^{2}+1}\right)-\ln \frac{\lambda_{2}\left(1+\sqrt{\gamma^{2} \lambda_{3} ^{2}+1}\right) }{\lambda_{3} \left(1+\sqrt{\gamma^{2} \lambda_{2} ^{2}+1}\right)}\right]^2
+    \label{eq42}
+\end{equation}
+\end{frame}
+
+\begin{frame}
+\frametitle{欠阻尼布朗粒子随机热机的效率}
+\begin{alertblock}{欠阻尼布朗粒子随机热机的效率}
+    在$\gamma \lambda \to 0$的情况下，可得$\chi=1$，于是得到
+    \begin{equation}
+        \eta=1-\sqrt{1-\eta_{\mathrm{c}}}
+        \label{eq3.53}
+    \end{equation}   
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+    \frametitle{总结与展望}
+\begin{alertblock}{目前做了的工作}
+\begin{itemize}
+    \item<2-> 对于欠阻尼和过阻尼等温捷径过程，以及绝热捷径过程，得到了计算能量差、输入功、吸收热的表达式
+    \item<3-> 利用等温捷径和绝热捷径构造了类卡诺热机
+    \item<4-> 对于过阻尼情况，计算出了该热机在最大功率时的效率 
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+    \frametitle{总结与展望}
+\begin{alertblock}{以后要做的工作}
+\begin{itemize}
+    \item<2-> 计算欠阻尼情况下，该热机在最大功率时的效率
+    \item<3-> 将构造的类卡诺热机的效率与其他热机进行比较，包括Curzon和Ahlborn构造的内可逆热机\upcite{Curzon1975}，T. Schmiedl 和 U. Seifert构造的布朗随机热机模型\upcite{Schmiedl2008}，涂展春构建的类卡洛热机\upcite{Tu2013}，Campo等人构建的奥托热机\upcite{DelCampo2014}
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+\begin{center} 
+   \LARGE \textbf{THANK YOU!}
+\end{center}
+\end{frame}
 
 
 \footnotesize
 \bibliography{ref/refs}
-\bibliographystyle{unsrt}
+\bibliographystyle{unsrt}   
+
+
 
 \end{document}
