@@ -1,6 +1,7 @@
 \documentclass{beamer}
 %\usepackage[bars]{beamerthemetree} % Beamer主题样式v 2.2
 \usepackage{ctex}
+\usepackage{amsmath}
 \usepackage{bm}
 \usepackage{cite}
 \usepackage{color}
@@ -358,37 +359,53 @@
 
 \section{类卡诺热机的功率与效率}
 \subsection{类卡诺热机模型}
-\begin{frame}{类卡诺热机模型}
-\begin{columns}
-    \begin{column}{.6\textwidth}
-        \begin{exampleblock}{类卡诺热机模型的假设}
-        \begin{itemize}
-        \item<2-> 忽略绝热捷径过程的时间 
-        \end{itemize}
-        \end{exampleblock}          
-    \end{column}
-    \begin{column}{.5\textwidth}
-    \begin{figure}
-        \centering
-        \def\svgwidth{\columnwidth}
-        \input{fig/p3.1.pdf_tex}
-        \caption{类卡诺热机模型}
-        \label{p3.1}
-        \end{figure}
-    \end{column}   
-\end{columns}
+\begin{frame}{随机能量学}
+哈密顿量为$H=\frac{p^{2}}{2}+U_0 (q,\lambda(t)) + U_1 (q,p,t)$，其全微分
+\begin{equation}
+    \M{d} H=\left(\dot{p} p+\dot{q} \frac{\partial U_0}{\partial q} +  \dot{p} \PP{U_1}{p} + \dot{q} \PP{U_1}{q}  \right) \M{d} t+\left(\dot{\lambda} \frac{\partial U_0}{\partial \lambda} + \PP{U_1}{t} \right) \M{d} t
+    \label{eq31.2}
+\end{equation}
+定义沿着轨道的能量差$\Delta e$\upcite{Tu2013}、输入功$w$\upcite{Sekimoto2010,Jarzynski1997,Sekimoto_1997}、吸收热$\bar{q}$
+\begin{equation}
+% \begin{align}
+\begin{split}
+    \Delta e \equiv H\left(t_{f}\right)-H\left(t_{i}\right),\quad &
+    w \equiv \int_{t_{i}}^{t_{f}} \M{d} t \left( \dot{\lambda} \frac{\partial U_0}{\partial \lambda} + \PP{U_1}{t} \right),\\
+    \bar{q}\equiv \int_{t_{i}}^{t_{f}}  \M{d} t & \left(\dot{p} p+\dot{q} \frac{\partial U}{\partial q} +  \dot{p} \PP{U}{p}\right)
+    \label{eq31.5}
+\end{split}
+% \end{align}
+\end{equation}
 \end{frame}
 
-\begin{frame}{类卡诺热机模型}
+\begin{frame}{随机能量学}
+对$\Delta e,\ w ,\ \bar{q}$求系综平均得
+\begin{align}
+    \Delta E &\equiv \langle\Delta e\rangle=\left.\int \M{d} q \int \M{d} p(H \rho)\right|_{t_{i}} ^{t_{f}}\\
+    W &\equiv\langle w\rangle=\int_{t_{i}}^{t_{f}} \M{d} t \int \M{d} q \int \M{d} p \left[ \rho\left( \dot{\lambda} \frac{\partial U_0}{\partial \lambda} + \PP{U_1}{t} \right)\right] 
+    \\
+    Q&\equiv\langle \bar{q}\rangle=-\int_{t_i}^{t_f} \mathrm{d} t \int \mathrm{d} q \int \mathrm{d} p \gamma \rho\left(p+\frac{\partial U}{\partial p}\right)\left(p+\frac{\partial U}{\partial p}+\frac{1}{\beta \rho} \frac{\partial \rho}{\partial p}\right)  
+    \label{eq3.12}
+\end{align} 
+\end{frame}
+
+
+\begin{frame}{类卡诺热机效率}
     \begin{columns}
-        \begin{column}{.6\textwidth}
+        \begin{column}{.7\textwidth}
             \begin{exampleblock}{类卡诺热机模型的假设}
             \begin{itemize}
-            \item<2-> 忽略绝热捷径过程的时间 
+            \item<2-> 采用依赖于时间的谐振子势
+            \begin{equation}
+                U_0 = q^{2} / 2 \lambda(t)^2
+                \label{eq32}
+            \end{equation}
+            再配上相应的辅助势驱动布朗粒子做功
+            \item<3-> 忽略绝热捷径过程的时间 
             \end{itemize}
             \end{exampleblock}          
         \end{column}
-        \begin{column}{.5\textwidth}
+        \begin{column}{.4\textwidth}
         \begin{figure}
             \centering
             \def\svgwidth{\columnwidth}
@@ -399,9 +416,104 @@
         \end{column}   
     \end{columns}
 \end{frame}
-
-
 \subsection{过阻尼布朗粒子}
+\begin{frame}{类卡诺热机的功率与效率}
+    \begin{columns}
+        \begin{column}{.7\textwidth}
+            \begin{block}{类卡诺热机的功率与效率}
+            \begin{itemize}
+            \item A.等温膨胀
+
+            将式\eqref{eq32}和式\eqref{eq2.62}代入式\eqref{eq3.12}可得
+            \begin{equation}
+                Q_{\mathrm{A}} = \beta_{\mathrm{h}}^{-1} \ln{\frac{\lambda_1}{\lambda_0}} - \beta_{\mathrm{h}}^{-1} C_{\mathrm{h}} [\lambda_{\mathrm{h}}(\tau)] \frac{1}{t_1}     
+                \label{eq3.16}
+            \end{equation}
+            其中$C_{\mathrm{h}} [\lambda_{\mathrm{h}}(\tau)] \equiv \gamma \int_{0}^{1} \mathrm{d} \tau \left(\DD{\lambda_{h}}{\tau}\right)^2,$ $\lambda_{h}(\tau)\equiv\lambda({t_1 \tau})$
+            \item B.绝热膨胀
+            
+            同理可得
+            \begin{equation}
+                W_{\mathrm{B}} = \Delta E_{\mathrm{B}} = (\beta_{\mathrm{c}}^{-1} - \beta_{\mathrm{h}}^{-1}),\  Q_{\mathrm{B}}=0
+                \label{eq3.17}
+            \end{equation}
+            \end{itemize}
+            \end{block}          
+        \end{column}
+        \begin{column}{.4\textwidth}
+        \begin{figure}
+            \centering
+            \def\svgwidth{\columnwidth}
+            \input{fig/p3.1.pdf_tex}
+            \setcounter{figure}{2}
+            \caption{类卡诺热机模型}
+            \end{figure}
+        \end{column}   
+    \end{columns}
+\end{frame}
+
+\begin{frame}{类卡诺热机的功率与效率}
+    \begin{columns}
+        \begin{column}{.7\textwidth}
+            \begin{block}{类卡诺热机的功率与效率}
+            \begin{itemize}
+            \item C.等温压缩
+
+            \begin{equation}
+                Q_{\mathrm{C}} = \beta_{\mathrm{c}}^{-1} \ln{\frac{\lambda_3}{\lambda_2}} - \beta_{\mathrm{c}}^{-1} C_{\mathrm{c}} [\lambda_{\mathrm{c}}(\tau)] \frac{1}{t_3}
+                \label{eq3.18}
+            \end{equation}
+            其中$C_{\mathrm{c}} [\lambda_{\mathrm{c}}(\tau)]\equiv \gamma \int_{0}^{1} \mathrm{d} \tau    \left(\DD{\lambda_{c}}{\tau}\right)^2,\\ \lambda_{\mathrm{c}}(\tau)\equiv\lambda(t_3 \tau + t_2 +t_1)$
+            \item D.绝热压缩
+            
+            \begin{equation}
+                W_{\mathrm{D}} = \Delta E_{\mathrm{D}} = (\beta_{\mathrm{h}}^{-1} - \beta_{\mathrm{c}}^{-1}),\  Q_{\mathrm{D}}=0
+                \label{eq3.19}
+            \end{equation}
+            \end{itemize}
+            \end{block}          
+        \end{column}
+        \begin{column}{.4\textwidth}
+        \begin{figure}
+            \centering
+            \def\svgwidth{\columnwidth}
+            \input{fig/p3.1.pdf_tex}
+            \setcounter{figure}{2}
+            \caption{类卡诺热机模型}
+            \end{figure}
+        \end{column}   
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{类卡诺热机的功率与效率}
+则类卡诺热机的功率为
+\begin{equation}
+    \begin{split}
+        P=\frac{\left(\beta_{\mathrm{h}}^{-1}-\beta_{\mathrm{c}}^{-1}\right) \ln{\frac{\lambda_1}{\lambda_0}} - \left(\beta_{\mathrm{h}}^{-1} C_{\mathrm{h}} \frac{1}{t_1} + \beta_{\mathrm{c}}^{-1} C_{\mathrm{c}} \frac{1}{t_3}\right)}{t_1+t_3}
+    \end{split}
+    \label{eq3.35}
+\end{equation}
+效率为
+\begin{equation}
+    \begin{split}
+        \eta &= \frac{Q_{\mathrm{A}} + Q_{\mathrm{C}}}{Q_{\mathrm{A}}}\\ 
+        &=1- \frac{\beta_{\mathrm{c}}^{-1} \ln{\frac{\lambda_1}{\lambda_0}} + \beta_{\mathrm{c}}^{-1} C_{\mathrm{c}} \frac{1}{t_3}}{\beta_{\mathrm{h}}^{-1} \ln{\frac{\lambda_1}{\lambda_0}} - \beta_{\mathrm{h}}^{-1} C_{\mathrm{h}} \frac{1}{t_1}}
+    \end{split}
+    \label{3.20}
+\end{equation}
+\end{frame}
+
+\begin{frame}
+    \frametitle{类卡诺热机的功率与效率}
+\begin{alertblock}{类卡诺热机的效率}
+    优化$t_1,\ t_3$使得功率最大得
+ \begin{equation}
+    \eta^* =\frac{\eta_{\mathrm{c}}\left[\sqrt{\chi(1-\eta_{\mathrm{c}})}+1\right]}{2-\eta_{\mathrm{c}}+2 \sqrt{\chi\left(1-\eta_{\mathrm{c}}\right)}}
+    \label{eq3.37}
+\end{equation}
+\end{alertblock}
+\end{frame}
 
 \subsection{欠阻尼布朗粒子}
 

@@ -45,14 +45,24 @@
 \headcommand {\sectionentry {3}{类卡诺热机的功率与效率}{45}{类卡诺热机的功率与效率}{0}}
 \headcommand {\beamer@subsectionpages {45}{44}}
 \headcommand {\beamer@subsectionentry {0}{3}{1}{45}{类卡诺热机模型}}
-\headcommand {\slideentry {3}{1}{1}{45/46}{类卡诺热机模型}{0}}
-\headcommand {\beamer@framepages {45}{46}}
-\headcommand {\beamer@subsectionpages {45}{46}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{47}{过阻尼布朗粒子}}
-\headcommand {\beamer@subsectionpages {47}{46}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{47}{欠阻尼布朗粒子}}
-\headcommand {\beamer@partpages {1}{48}}
-\headcommand {\beamer@subsectionpages {47}{48}}
-\headcommand {\beamer@sectionpages {45}{48}}
-\headcommand {\beamer@documentpages {48}}
-\headcommand {\gdef \inserttotalframenumber {14}}
+\headcommand {\slideentry {3}{1}{1}{45/45}{类卡诺热机模型}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\slideentry {3}{1}{2}{46/46}{类卡诺热机模型}{0}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\slideentry {3}{1}{3}{47/49}{类卡诺热机模型}{0}}
+\headcommand {\beamer@framepages {47}{49}}
+\headcommand {\beamer@subsectionpages {45}{49}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{50}{过阻尼布朗粒子}}
+\headcommand {\slideentry {3}{2}{1}{50/50}{过阻尼布朗粒子}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\slideentry {3}{2}{2}{51/51}{过阻尼布朗粒子}{0}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\slideentry {3}{2}{3}{52/52}{过阻尼布朗粒子}{0}}
+\headcommand {\beamer@framepages {52}{52}}
+\headcommand {\slideentry {3}{2}{4}{53/53}{过阻尼布朗粒子}{0}}
+\headcommand {\beamer@framepages {53}{53}}
+\headcommand {\beamer@partpages {1}{53}}
+\headcommand {\beamer@subsectionpages {54}{53}}
+\headcommand {\beamer@sectionpages {45}{53}}
+\headcommand {\beamer@documentpages {53}}
+\headcommand {\gdef \inserttotalframenumber {20}}

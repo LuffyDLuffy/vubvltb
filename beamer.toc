@@ -5,5 +5,4 @@
 \beamer@subsectionintoc {2}{3}{等温捷径}{39}{0}{2}
 \beamer@sectionintoc {3}{类卡诺热机的功率与效率}{45}{0}{3}
 \beamer@subsectionintoc {3}{1}{类卡诺热机模型}{45}{0}{3}
-\beamer@subsectionintoc {3}{2}{过阻尼布朗粒子}{47}{0}{3}
-\beamer@subsectionintoc {3}{3}{欠阻尼布朗粒子}{47}{0}{3}
+\beamer@subsectionintoc {3}{2}{过阻尼布朗粒子}{50}{0}{3}
